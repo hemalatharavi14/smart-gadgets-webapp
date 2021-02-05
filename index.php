@@ -2,4 +2,9 @@
 include_once("index.html");
 include_once("style.css");
 include_once("script.js");
+include_once("Images/arrow.jpg");
+include_once("Images/chat_icon.jpg");
+include_once("Images/gadgets.jpg");
+include_once("Images/logo.gif");
+include_once("Images/web_icon.jpg");
 ?>
