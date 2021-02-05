@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Smart Gadgets</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/png" href="Images/web_icon.png">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<!--chatbot!-->
+	<div class="chat_icon">
+		<img src="Images/chat_icon.jpg" alt="Chat Icon">
+	</div>
+	<div class="chat_box">
+		<div class="chat_header">
+			<div class="chat_header_icon">
+				<img src="Images/chat_icon.jpg" alt="Chat Icon">
+			</div>
+			<div class="chat_heading">
+				<h3>Smart Bot</h3>
+			</div>
+		</div>
+		<div class="chat_info">
+			<p>Let's Chat!</p>
+		</div>
+		<div class="chat_body" id="c_body">
+			<table class="chat_table">
+				<tbody id="result">
+					
+				</tbody>
+			</table>
+		</div>
+		<div class="chat_area">
+			<input type="text" id="typingArea" onkeydown="if(event.keyCode==13){ talk() }" placeholder="Say Hi/Hello to start conversation...">
+		</div>
+	</div>
+	<!--chatbot!-->
+	<div class="main">
+		<nav>
+			<div class="logo">
+				<img src="Images/logo.gif" alt="Logo">
+			</div>
+			<div class="links">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="info">
+			<div class="overlay"></div>
+			<img src="Images/gadgets.jpg" class="allgadgets">
+			<div id="sphere" style="transform: rotate(0deg);">
+				<div class="gadget one">
+					<div>
+						<h2>Smart Watch</h2>
+						<p>Shows everything apart from time</p>
+					</div>
+				</div>
+				<div class="gadget two">
+					<div>
+						<h2>Google Assistant Speaker</h2>
+						<p>Assist you with anything</p>
+					</div>
+				</div>
+				<div class="gadget three">
+					<div>
+						<h2>Intel Stick PC</h2>
+						<p>Acts as portable CPU</p>
+					</div>
+				</div>
+				<div class="gadget four">
+					<div>
+						<h2>Smart Phone</h2>
+						<p>World in your Palms</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="controls">
+			<img src="Images/arrow.jpg" id="upBtn" alt="up arrow">
+			<h3>Gadgets</h3>
+			<img src="Images/arrow.jpg" id="downBtn" alt="down arrow">
+		</div>
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+.chat_box2{
+	position: fixed;
+	right: 20px;
+	bottom: 100px;
+	width: 400px;
+	height: 70vh;
+	background: transparent;
+	z-index: 1000;
+	transition: all 0.3s ease-out;
+	transform: scaleY(0);
+}
+.chat_box2.active{
+	transform: scaleY(1);
+}

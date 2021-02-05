@@ -1,0 +1,265 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+.main{
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+	background: linear-gradient(to right,#0af0e0,#cd03ff)
+}
+nav{
+	width: 80%;
+	position: sticky;
+	margin: 20px auto;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+}
+.logo{
+	flex: 20%;
+
+}
+.logo img{
+	width: 80px;
+	align-items: flex-start;
+}
+.links{
+	flex: 1;
+	text-align: right;
+}
+.links ul li{
+	list-style: none;
+	display: inline-block;
+	margin: 0 20px;
+}
+.links ul li a{
+	color: #fff;
+	text-decoration: none;
+}
+.info{
+	width: 1000px;
+	height:1000px;
+	position:absolute;
+	top: 50%;
+	left: -10%;
+	transform: translateY(-50%);
+}
+#sphere{
+	width: 1000px;
+	height:1000px;
+	position:absolute;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	transform: rotate(0deg);
+	transition: 1s;
+}
+.gadget img{
+	width: 70px;
+}
+.gadget{
+	position: absolute;
+	display: flex;
+}
+.gadget div{
+	margin-left: 30px;
+}
+.gadget div p{
+	margin-top: 8px;
+	color: #fff;
+}
+.gadget div h2{
+	color: #fff;
+}
+.one{
+	top: 435px;
+	left: 700px;
+}
+.two{
+	top: 100px;
+	left: 300px;
+	transform: rotate(-90deg);
+}
+.three{
+	top: 475px;
+	left: 50px;
+	transform: rotate(-180deg);
+}
+.four{
+	top: 800px;
+	left: 425px;
+	transform: rotate(-270deg);
+}
+.allgadgets{
+	width: 200px;
+	position: absolute;
+	top: 50%;
+	left: 35%;
+	transform: translateY(-50%);
+	z-index: 1;
+}
+.controls{
+	position: absolute;
+	right: 10%;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+}
+.controls h3{
+	margin-top: 15px;
+	margin-bottom: 25px;
+	color: #fff;
+}
+#upBtn{
+	width: 25px;
+	cursor: pointer;
+}
+#downBtn{
+	width: 25px;
+	cursor: pointer;
+	transform: rotate(180deg);
+}
+.overlay{
+	width: 0;
+	height: 0;
+	border-top: 500px solid #fff;
+	border-right: 500px solid transparent;
+	border-bottom: 500px solid #fff;
+	border-left: 500px solid #fff;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.chat_icon{
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	font-size: 10px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 1000;
+}
+.chat_icon img{
+	width: 75px;
+}
+.chat_box{
+	position: fixed;
+	right: 20px;
+	bottom: 100px;
+	width: 400px;
+	height: 70vh;
+	background: #fff;
+	z-index: 1000;
+	transition: all 0.3s ease-out;
+	transform: scaleY(0);
+}
+.chat_box.active{
+	transform: scaleY(1);
+}
+.chat_header{
+	height: 8vh;
+	background-color: #007bff;
+}
+.chat_header_icon{
+	position: absolute;
+	float: left;
+    top: 4px;
+    left: 4px;
+    width: 50px;
+    height: 40px;
+    vertical-align: middle;
+    text-align: center;
+}
+.chat_header_icon img{
+	max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 0;
+    margin: auto; 
+}
+.chat_heading{
+	padding-top: 9px;
+	padding-left: 147px;
+	color: #fff;
+}
+.chat_info{
+	height: 5vh;
+	text-align: center;
+	background-color: #e6e6e6;
+	text-decoration-color: #000000;
+}
+.chat_body{
+	height: 47vh;
+    overflow: auto;
+}
+.chat_table{
+	max-height: 100%;
+    min-height: 1%;
+    height: auto;
+    width: 100%;
+}
+table {
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 2px;
+}
+#result{
+	vertical-align: bottom;
+}
+td{
+	display: table-cell;
+}
+.chat_area{
+	position: fixed;
+    bottom: 0;
+    height: 55px;
+    border-top: 1px solid lightgray;
+    background-color: white;
+    width: 100%;
+}
+#typingArea{
+    border: 0;
+    width: 390px;
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+    height: 55px;
+}
+tr{
+	height: 10%;
+	overflow: visible;
+}
+.user_req td{
+	float: left;
+	max-width: 80%;
+	min-width: 10%;
+	width: auto;
+	background-color: #d9d9d9;
+	border-radius: 5px;
+	border-spacing: 20px;
+	padding: 3px;
+	
+}
+.user_res{
+	transition-delay: 2s;
+}
+.user_res td{
+	float: right;
+	max-width: 80%;
+	min-width: 10%;
+	width: auto;
+	background-color: #99caff;
+	border-radius: 5px;
+	border-spacing: 20px;
+	padding: 3px;
+}
