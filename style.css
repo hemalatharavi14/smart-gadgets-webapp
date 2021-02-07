@@ -75,12 +75,12 @@ nav{
 	color: #fff;
 }
 .one{
-	top: 435px;
-	left: 700px;
+	top: 450px;
+	left: 600px;
 }
 .two{
 	top: 100px;
-	left: 300px;
+	left: 270px;
 	transform: rotate(-90deg);
 }
 .three{
@@ -90,7 +90,7 @@ nav{
 }
 .four{
 	top: 800px;
-	left: 425px;
+	left: 350px;
 	transform: rotate(-270deg);
 }
 .allgadgets{
@@ -114,11 +114,11 @@ nav{
 	color: #fff;
 }
 #upBtn{
-	width: 25px;
+	width: 30px;
 	cursor: pointer;
 }
 #downBtn{
-	width: 25px;
+	width: 30px;
 	cursor: pointer;
 	transform: rotate(180deg);
 }
