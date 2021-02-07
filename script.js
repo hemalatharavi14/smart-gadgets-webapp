@@ -26,31 +26,17 @@ $(document).ready(function(){
 })
 
 var know ={
-		"hi":"Hi! I'm Smart Bot. How are you doing?",
-		"Hi":"Hi! I'm Smart Bot. How are you doing?",
-		"HI":"Hi! I'm Smart Bot. How are you doing?",
-		"hello":"Hello! I'm Smart Bot. How are you?",
-		"Hello":"Hello! I'm Smart Bot. How are you?",
-		"HELLO":"Hello! I'm Smart Bot. How are you?",
-		"hi!":"Do you want to know about any of the gadgets?",
-		"Hi!":"Do you want to know about any of the gadgets?",
-		"HI!":"Do you want to know about any of the gadgets?",
-		"fine":"Good! Do you want to know about any of the gadgets?",
-		"Fine":"Good! Do you want to know about any of the gadgets?",
-		"FINE":"Good! Do you want to know about any of the gadgets?",
-		"good":"Wonderful! Do you want to know about any of the gadgets?",
-		"Good":"Wonderful! Do you want to know about any of the gadgets?",
-		"GOOD":"Wonderful! Do you want to know about any of the gadgets?",
-		"yes":"1. SmartWatch<br>2. Google Assistant Speaker<br>3. Intel Stick PC<br>4. Smart Phone.<br>Choose anyone number!",
-		"Yes":"1. SmartWatch<br>2. Google Assistant Speaker<br>3. Intel Stick PC<br>4. Smart Phone.<br>Choose anyone number!",
-		"YES":"1. SmartWatch<br>2. Google Assistant Speaker<br>3. Intel Stick PC<br>4. Smart Phone.<br>Choose anyone number!",
-		"1":"SmartWatch has many features such as viewing notifications and sending messages from your wrist, tracking your activities and fitness goals through Google Fit, listening to music, logging your location (for GPS-enabled devices), talking to Google Assistant apart from showing time! <br><br> Do you want to know about any of the gadgets?",
-		"2":"Google Assistant Speaker has the following features: 1) Find Your Phone. 2) Open Apps With Voice Commands. 3) Get Your Day Started The Right Way. 4) Control All Aspects of Your Smart Home. 5) Have Google Assistant Read You The News. 6) Send Voice Messages When You're On The Go. 7) Your Virtual Butler As Translator. 8) Get Ready For Netflix and Chill Hands-Free. <br><br> Do you want to know about any of the gadgets?",
-		"3":"Intel Stick PC is also known as Compute Stick which is a desktop PC that fits in the palm of your hand. It's designed to plug into any free HDMI port on a computer monitor or HDTV. You won't get a display, keyboard, or mouse with it, but the Compute Stick will let you carry a Windows PC in your shirt pocket, ready to plug in at home or in the office. <br><br> Do you want to know about any of the gadgets?",
-		"4":"A Smartphone is a cell phone that allows you to do more than make phone calls and send text messages. Smartphones can browse the Internet and run software programs like a computer. Smartphones use a touch screen to allow users to interact with them. <br><br> Do you want to know about any of the gadgets?",
-		"no":"Had a good conversation with you! Have a nice day :) <br><br>For any queries just say Hi!",
-		"No":"Had a good conversation with you! Have a nice day :) <br><br>For any queries just say Hi!",
-		"NO":"Had a good conversation with you! Have a nice day :) <br><br>For any queries just say Hi!"
+		"what is your name? name please! how can I call you?":"Hi! I'm Smart Bot ;)",
+		"hi! hey! ":"Hi! I'm Smart Bot. How are you doing?",
+		"hello! greetings!":"Hello! I'm Smart Bot. How are you?",
+		"going fine how are you? I am fine how are you? i'm fine how are you? I'm awesome how are you? wonderful how are you?":"Good! Do you want to know about any of the gadgets?",
+		"good how are you? doing well how are you?":"Wonderful! Do you want to know about any of the gadgets?",
+		"yeah! yeah yes ssssss menu gadgets products models":"1. SmartWatch<br>2. Google Assistant Speaker<br>3. Intel Stick PC<br>4. Smart Phone.<br>Choose anyone number!",
+		"1 smart watches":"SmartWatch has many features such as viewing notifications and sending messages from your wrist, tracking your activities and fitness goals through Google Fit, listening to music, logging your location (for GPS-enabled devices), talking to Google Assistant apart from showing time! <br><br> Do you want to know about any of the gadgets?",
+		"2 google assistant speakers":"Google Assistant Speaker has the following features: 1) Find Your Phone. 2) Open Apps With Voice Commands. 3) Get Your Day Started The Right Way. 4) Control All Aspects of Your Smart Home. 5) Have Google Assistant Read You The News. 6) Send Voice Messages When You're On The Go. 7) Your Virtual Butler As Translator. 8) Get Ready For Netflix and Chill Hands-Free. <br><br> Do you want to know about any of the gadgets?",
+		"3 intel stick peronal computers intel stick pc":"Intel Stick PC is also known as Compute Stick which is a desktop PC that fits in the palm of your hand. It's designed to plug into any free HDMI port on a computer monitor or HDTV. You won't get a display, keyboard, or mouse with it, but the Compute Stick will let you carry a Windows PC in your shirt pocket, ready to plug in at home or in the office. <br><br> Do you want to know about any of the gadgets?",
+		"4 smart phones mobiles":"A Smartphone is a cell phone that allows you to do more than make phone calls and send text messages. Smartphones can browse the Internet and run software programs like a computer. Smartphones use a touch screen to allow users to interact with them. <br><br> Do you want to know about any of the gadgets?",
+		"no thank you bye no thanks bye":"Had a good conversation with you! Have a nice day :) <br><br>For any queries just say Hi!"
 	};
 
 function talk()
@@ -58,14 +44,21 @@ function talk()
 	var user=document.getElementById("typingArea").value;
 	document.getElementById("typingArea").value="";
 	var res=document.getElementById("result");
+	var flag=0;
 	res.innerHTML+=`<tr class="user_req"><td>`+user+`<br></td></tr>`;
-	if(user in know)
+	for(var key in know)
 	{
-		res.innerHTML+=`<tr class="user_res"><td>`+know[user]+`<br></td></tr>`;
+		if(key.toLowerCase().includes(user.toLowerCase()))
+		{
+			console.log(know[key]);
+			res.innerHTML+=`<tr class="user_res"><td>`+know[key]+`<br></td></tr>`;
+			flag=1;
+			break;
+		}
 	}
-	else
+	if(flag==0)
 	{
-		res.innerHTML+=`<tr class="user_res"><td>I can't understand! Can you come again?<br></td></tr>`;
+		res.innerHTML+=`<tr class="user_res"><td>I can't understand! Please answer precisely...<br></td></tr>`;
 	}
 }
 
